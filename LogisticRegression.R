@@ -13,7 +13,7 @@ library(tfestimators)
 ggcorr(spambase)
 # Checking the vif and multicolinearity
 vif(spambase)
-# setting the threshhold to 5 and stepping though
+# Setting the threshhold to 5 and stepping though
 vifstep(spambase, th = 5)
 
 # Dropping the columns that are above the threshold
@@ -27,7 +27,7 @@ dim(test)
 train = data[-indexes,]
 dim(train)
 
-# initial logistic regression model
+# Initial logistic regression model
 model <- glm (Spam ~ ., data = train, family = binomial)
 summary(model)
 
